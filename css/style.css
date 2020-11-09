@@ -127,9 +127,32 @@ input[type='checkbox']:checked ~ nav {
   }
   .main .bloc:nth-child(1) {
     background-color: blue;
-    height: 70vw;
-    min-height: 150px;
+    height: 80vw;
+    min-height: 300px;
     max-height: 400px;
+  }
+  .main .bloc:nth-child(1) .contain {
+    background-color: blue;
+    height: 100%;
+  }
+  .main .bloc:nth-child(2) {
+    background-color: palegreen;
+    height: 80vw;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .main .bloc:nth-child(2) .contain {
+    background-color: palegreen;
+    height: 100%;
+  }
+  .main .bloc:nth-child(3) {
+    background-color: paleturquoise;
+    height: 30vw;
+    max-height: 100px;
+  }
+  .main .bloc:nth-child(3) .contain {
+    background-color: paleturquoise;
+    height: 100%;
   }
 }
 
@@ -152,13 +175,25 @@ input[type='checkbox']:checked ~ nav {
     background-color: blue;
     height: 400px;
   }
+  .main .bloc:nth-child(1) .contain {
+    background-color: yellow;
+    height: 100%;
+  }
   .main .bloc:nth-child(2) {
-    background-color: brown;
+    background-color: palegreen;
     height: 300px;
   }
+  .main .bloc:nth-child(2) .contain {
+    background-color: yellow;
+    height: 100%;
+  }
   .main .bloc:nth-child(3) {
-    background-color: pink;
-    height: 50px;
+    background-color: paleturquoise;
+    height: 100px;
+  }
+  .main .bloc:nth-child(3) .contain {
+    background-color: yellow;
+    height: 100%;
   }
   .main .bloc:nth-child(4) {
     background-color: yellow;

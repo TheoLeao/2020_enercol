@@ -13,7 +13,7 @@ li {
     list-style-type: none;
 }
 
-header {
+.menu {
     height: auto;
     width: 100%;
     display: flex;
@@ -69,7 +69,7 @@ input[type='checkbox']:checked~nav {
         display: none;
     }
     /* Mettre le header en ligne*/
-    header {
+    .menu {
         display: flex;
         flex-direction: row;
         justify-content: space-between;

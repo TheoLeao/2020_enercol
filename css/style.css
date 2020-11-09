@@ -13,7 +13,7 @@ li {
   list-style-type: none;
 }
 
-header {
+.menu {
   height: auto;
   width: 100%;
   display: -ms-flexbox;
@@ -74,7 +74,7 @@ input[type='checkbox']:checked ~ nav {
     display: none;
   }
   /* Mettre le header en ligne*/
-  header {
+  .menu {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -102,6 +102,89 @@ input[type='checkbox']:checked ~ nav {
   .nav li a {
     margin: 30px;
   }
+}
+
+header {
+  height: 350px;
+  background-color: red;
+}
+
+.main {
+  background-color: green;
+  height: auto;
+}
+
+.main .contain {
+  background-color: yellow;
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.main .bloc:nth-child(1) {
+  background-color: blue;
+  height: 300px;
+}
+
+.main .bloc:nth-child(2) {
+  background-color: brown;
+  height: 300px;
+}
+
+.main .bloc:nth-child(3) {
+  background-color: pink;
+  height: 50px;
+}
+
+.main .bloc:nth-child(4) {
+  background-color: yellow;
+  height: 100px;
+}
+
+.main .bloc:nth-child(5) {
+  background-color: orange;
+  height: 50px;
+}
+
+.articles {
+  height: auto;
+  background-color: green;
+}
+
+.articles .contain {
+  background-color: red;
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.articles .bloc {
+  margin-bottom: 10px;
+}
+
+.articles .bloc:nth-child(1) {
+  background-color: blue;
+  height: 300px;
+}
+
+.articles .bloc:nth-child(2) {
+  background-color: pink;
+  height: 300px;
+}
+
+.articles .bloc:nth-child(3) {
+  background-color: yellow;
+  height: 300px;
+}
+
+.articles .bloc:nth-child(4) {
+  background-color: brown;
+  height: 300px;
+}
+
+footer {
+  height: 200px;
+  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */

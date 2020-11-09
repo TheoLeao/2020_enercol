@@ -2,7 +2,18 @@
 @import "mixins";
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @include respond-to("small") {
+    header{
+        min-height: 150px;
+        max-height:350px;
+        height: 50vw;
+        background-color: red;
+    
+        .menu{
+            height: 40px;
+            background-color: green;
+        }
 
+    }
 }
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @include respond-to("medium") {

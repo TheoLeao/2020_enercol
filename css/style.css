@@ -106,6 +106,19 @@ input[type='checkbox']:checked ~ nav {
 
 /* ------- MIXIN RACCOURCIS ------- */
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
+@media (min-width: 0px) {
+  header {
+    min-height: 150px;
+    max-height: 350px;
+    height: 50vw;
+    background-color: red;
+  }
+  header .menu {
+    height: 40px;
+    background-color: green;
+  }
+}
+
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @media (min-width: 800px) {
   header {

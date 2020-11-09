@@ -1,9 +1,9 @@
 //Définition des breakpoints via une MAP
 $breakpoints: (
-    "small": "0px",
-    "medium": "800px",
-    "large": "1000px",
-    "huge": "1200px",
+    "small": 0px,
+    "medium": 800px,
+    "large": 1000px,
+    "huge": 1200px,
 );
 
 //Mixin qui permet d'utiliser facilement les mediaQueries

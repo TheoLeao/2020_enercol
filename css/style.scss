@@ -1,10 +1,12 @@
 @import "menu";
 @import "mixins";
+$header_heightDesktop: 350px;
+$bloc1_heightDesktop: 400px;
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @include respond-to("small") {
     header{
         min-height: 150px;
-        max-height:350px;
+        max-height: $header_heightDesktop;
         height: 50vw;
         background-color: red;   
         .menu{
@@ -17,7 +19,7 @@
         height: 250px;
 
         .contain{
-            //background-color: yellow;
+            background-color: yellow;
             height: 100%;
         }
         .bloc:nth-child(1) {
@@ -25,8 +27,7 @@
             //Hauteur en fonction width viewport et ses limites
             height: 70vw;
             min-height: 150px;
-            max-height: 300px;
-
+            max-height: $bloc1_heightDesktop;
         }
         
     }
@@ -36,7 +37,7 @@
     //Structure desktop
     header {
         //Dimension
-        height: 350px;
+        height: $header_heightDesktop;
         //Style
         background-color: red;
     }
@@ -44,13 +45,13 @@
         background-color: green;
         height: auto;
         .contain {
-            width: 65%;
+            max-width: map-get($breakpoints,medium);
             height: 100%;
             margin: 0 auto;
         }
         .bloc:nth-child(1) {
             background-color: blue;
-            height: 300px;
+            height: $bloc1_heightDesktop;
         }
         .bloc:nth-child(2) {
             background-color: brown;

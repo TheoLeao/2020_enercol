@@ -104,6 +104,7 @@ input[type='checkbox']:checked ~ nav {
   }
 }
 
+/* ------- MIXIN RACCOURCIS ------- */
 header {
   height: 350px;
   background-color: red;

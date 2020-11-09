@@ -1,4 +1,5 @@
 @import 'menu';
+@import 'mixins';
 
 //Structure desktop
 header{
@@ -16,7 +17,6 @@ header{
         height: 100%;
         margin:0 auto;
     }
-   
     .bloc:nth-child(1){
         background-color: blue;
         height: 300px;

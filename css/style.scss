@@ -6,13 +6,29 @@
         min-height: 150px;
         max-height:350px;
         height: 50vw;
-        background-color: red;
-    
+        background-color: red;   
         .menu{
             height: 40px;
             background-color: green;
         }
+    }
+    .main{
+        height: auto;
+        height: 250px;
 
+        .contain{
+            //background-color: yellow;
+            height: 100%;
+        }
+        .bloc:nth-child(1) {
+            background-color: blue;
+            //Hauteur en fonction width viewport et ses limites
+            height: 70vw;
+            min-height: 150px;
+            max-height: 300px;
+
+        }
+        
     }
 }
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
@@ -28,7 +44,6 @@
         background-color: green;
         height: auto;
         .contain {
-            background-color: yellow;
             width: 65%;
             height: 100%;
             margin: 0 auto;

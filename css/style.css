@@ -107,6 +107,7 @@ input[type='checkbox']:checked ~ nav {
 /* ------- MIXIN RACCOURCIS ------- */
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @media (min-width: 0px) {
+  /* --- HEADER --- */
   header {
     min-height: 150px;
     max-height: 350px;
@@ -117,9 +118,9 @@ input[type='checkbox']:checked ~ nav {
     height: 40px;
     background-color: green;
   }
+  /* --- MAIN --- */
   .main {
     height: auto;
-    height: 250px;
   }
   .main .contain {
     background-color: yellow;
@@ -152,6 +153,35 @@ input[type='checkbox']:checked ~ nav {
   }
   .main .bloc:nth-child(3) .contain {
     background-color: paleturquoise;
+    height: 100%;
+  }
+  .main .bloc:nth-child(4) {
+    background-color: #FCFF6C;
+    height: 80vw;
+    max-height: 300px;
+  }
+  .main .bloc:nth-child(4) .contain {
+    background-color: #FCFF6C;
+    height: 100%;
+  }
+  .main .bloc:nth-child(5) {
+    background-color: orange;
+    height: 30vw;
+    max-height: 100px;
+  }
+  .main .bloc:nth-child(5) .contain {
+    background-color: orange;
+    height: 100%;
+  }
+  /* --- ARTICLES --- */
+  .articles .bloc:nth-child(1) {
+    background-color: blue;
+    height: 80vw;
+    min-height: 300px;
+    max-height: 350px;
+  }
+  .articles .bloc:nth-child(1) .contain {
+    background-color: blue;
     height: 100%;
   }
 }
@@ -196,12 +226,20 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
   }
   .main .bloc:nth-child(4) {
+    background-color: #FCFF6C;
+    height: 300px;
+  }
+  .main .bloc:nth-child(4) .contain {
     background-color: yellow;
-    height: 100px;
+    height: 100%;
   }
   .main .bloc:nth-child(5) {
     background-color: orange;
-    height: 50px;
+    height: 100px;
+  }
+  .main .bloc:nth-child(5) .contain {
+    background-color: yellow;
+    height: 100%;
   }
   .articles {
     height: auto;
@@ -209,7 +247,7 @@ input[type='checkbox']:checked ~ nav {
   }
   .articles .contain {
     background-color: red;
-    width: 65%;
+    max-width: 800px;
     height: 100%;
     margin: 0 auto;
   }
@@ -218,7 +256,11 @@ input[type='checkbox']:checked ~ nav {
   }
   .articles .bloc:nth-child(1) {
     background-color: blue;
-    height: 300px;
+    height: 350px;
+  }
+  .articles .bloc:nth-child(1) .contain {
+    background-color: yellow;
+    height: 100%;
   }
   .articles .bloc:nth-child(2) {
     background-color: pink;

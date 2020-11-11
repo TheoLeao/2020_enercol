@@ -4,10 +4,15 @@ $header_heightDesktop: 350px;
 $bloc1_heightDesktop: 400px;
 $bloc2_heightDesktop: 300px;
 $bloc3_heightDesktop: 100px;
+$bloc4_heightDesktop: 300px;
+$bloc5_heightDesktop: 100px;
+$bloc1-article_heightDesktop: 350px; 
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @include respond-to("small") {
+
+/* --- HEADER --- */
     header{
-        
+
         min-height: 150px;
         max-height: $header_heightDesktop;
         height: 50vw;
@@ -17,9 +22,9 @@ $bloc3_heightDesktop: 100px;
             background-color: green;
         }
     }
+/* --- MAIN --- */
     .main{
         height: auto;
-        height: 250px;
 
         .contain{
             background-color: yellow;
@@ -52,11 +57,10 @@ $bloc3_heightDesktop: 100px;
             }
         }
 
-        //Bloc 3: Section CTA "Comprendre notre modèle de production"
+        //Bloc 3: Bouton CTA "Comprendre notre modèle de production"
         .bloc:nth-child(3) {
             background-color: paleturquoise;
-            height: 30vw;
-            //min-height: 10px;     
+            height: 30vw;   
             max-height: $bloc3_heightDesktop;
             
             // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
@@ -65,11 +69,48 @@ $bloc3_heightDesktop: 100px;
                 height: 100%;
             }
         }
-
-
-
-        
+        //Bloc 4: Pourquoi devenir sociétaire
+        .bloc:nth-child(4) {
+            background-color: #FCFF6C;
+            height: 80vw;  
+            max-height: $bloc4_heightDesktop;
+            
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: #FCFF6C;
+                height: 100%;
+            }
+        }
+        //Bloc 5: Bouton CTA "souscrire"
+        .bloc:nth-child(5) {
+            background-color: orange;
+            height: 30vw;
+            //min-height: 10px;     
+            max-height: $bloc5_heightDesktop;
+            
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: orange;
+                height: 100%;
+            }
+        }    
     }
+/* --- ARTICLES --- */
+.articles{
+    .bloc:nth-child(1) {
+        background-color: blue;
+        //Hauteur en fonction width viewport et ses limites
+        height: 80vw;
+        min-height: 300px;
+        max-height: $bloc1-article_heightDesktop;
+        // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+        .contain{
+            background-color: blue;
+            height: 100%;
+        }            
+    }
+}
+
 }
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @include respond-to("medium") {
@@ -116,12 +157,22 @@ $bloc3_heightDesktop: 100px;
             }
         }
         .bloc:nth-child(4) {
-            background-color: yellow;
-            height: 100px;
+            background-color: #FCFF6C;
+            height: $bloc4_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
         .bloc:nth-child(5) {
             background-color: orange;
-            height: 50px;
+            height: $bloc5_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
     }
     .articles {
@@ -130,7 +181,7 @@ $bloc3_heightDesktop: 100px;
         //Contient le contenu
         .contain {
             background-color: red;
-            width: 65%;
+            max-width: map-get($breakpoints,medium);
             height: 100%;
             margin: 0 auto;
         }
@@ -141,7 +192,12 @@ $bloc3_heightDesktop: 100px;
         //Bloc 1: Actualités
         .bloc:nth-child(1) {
             background-color: blue;
-            height: 300px;
+            height: $bloc1-article_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
         //Bloc 2: Notre démarche
         .bloc:nth-child(2) {

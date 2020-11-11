@@ -174,14 +174,57 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
   }
   /* --- ARTICLES --- */
+  .articles .bloc {
+    margin-bottom: 10px;
+  }
   .articles .bloc:nth-child(1) {
-    background-color: blue;
+    background-color: pink;
     height: 80vw;
     min-height: 300px;
     max-height: 350px;
   }
   .articles .bloc:nth-child(1) .contain {
+    background-color: pink;
+    height: 100%;
+  }
+  .articles .bloc:nth-child(2) {
+    background-color: brown;
+    height: 80vw;
+    min-height: 300px;
+    max-height: 350px;
+  }
+  .articles .bloc:nth-child(2) .contain {
+    background-color: brown;
+    height: 100%;
+  }
+  .articles .bloc:nth-child(3) {
     background-color: blue;
+    height: 80vw;
+    min-height: 300px;
+    max-height: 350px;
+  }
+  .articles .bloc:nth-child(3) .contain {
+    background-color: blue;
+    height: 100%;
+  }
+  .articles .bloc:nth-child(4) {
+    background-color: #bd2d2d;
+    height: 80vw;
+    min-height: 300px;
+    max-height: 350px;
+  }
+  .articles .bloc:nth-child(4) .contain {
+    background-color: #bd2d2d;
+    height: 100%;
+  }
+  footer {
+    background-color: black;
+    height: 50vw;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  footer .contain {
+    background-color: black;
     height: 100%;
   }
 }
@@ -192,14 +235,14 @@ input[type='checkbox']:checked ~ nav {
     height: 350px;
     background-color: red;
   }
-  .main {
-    background-color: green;
-    height: auto;
-  }
-  .main .contain {
+  .contain {
     max-width: 800px;
     height: 100%;
     margin: 0 auto;
+  }
+  .main {
+    background-color: green;
+    height: auto;
   }
   .main .bloc:nth-child(1) {
     background-color: blue;
@@ -251,11 +294,8 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
     margin: 0 auto;
   }
-  .articles .bloc {
-    margin-bottom: 10px;
-  }
   .articles .bloc:nth-child(1) {
-    background-color: blue;
+    background-color: pink;
     height: 350px;
   }
   .articles .bloc:nth-child(1) .contain {
@@ -263,20 +303,36 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
   }
   .articles .bloc:nth-child(2) {
-    background-color: pink;
-    height: 300px;
+    background-color: brown;
+    height: 350px;
+  }
+  .articles .bloc:nth-child(2) .contain {
+    background-color: yellow;
+    height: 100%;
   }
   .articles .bloc:nth-child(3) {
+    background-color: blue;
+    height: 350px;
+  }
+  .articles .bloc:nth-child(3) .contain {
     background-color: yellow;
-    height: 300px;
+    height: 100%;
   }
   .articles .bloc:nth-child(4) {
-    background-color: brown;
-    height: 300px;
+    background-color: #bd2d2d;
+    height: 350px;
+  }
+  .articles .bloc:nth-child(4) .contain {
+    background-color: yellow;
+    height: 100%;
   }
   footer {
     height: 200px;
     background-color: black;
+  }
+  footer .contain {
+    background-color: yellow;
+    height: 100%;
   }
 }
 

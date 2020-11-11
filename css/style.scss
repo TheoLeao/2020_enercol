@@ -7,6 +7,10 @@ $bloc3_heightDesktop: 100px;
 $bloc4_heightDesktop: 300px;
 $bloc5_heightDesktop: 100px;
 $bloc1-article_heightDesktop: 350px; 
+$bloc2-article_heightDesktop: 350px;
+$bloc3-article_heightDesktop: 350px;
+$bloc4-article_heightDesktop: 350px;
+$footer_heightDesktop: 200px;
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @include respond-to("small") {
 
@@ -97,18 +101,70 @@ $bloc1-article_heightDesktop: 350px;
     }
 /* --- ARTICLES --- */
 .articles{
+    //Applicable aux blocs
+    .bloc {
+        margin-bottom: 10px;
+    }
     .bloc:nth-child(1) {
-        background-color: blue;
+        background-color: pink;
         //Hauteur en fonction width viewport et ses limites
         height: 80vw;
         min-height: 300px;
         max-height: $bloc1-article_heightDesktop;
         // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
         .contain{
+            background-color: pink;
+            height: 100%;
+        }            
+    }
+    .bloc:nth-child(2) {
+        background-color: brown;
+        //Hauteur en fonction width viewport et ses limites
+        height: 80vw;
+        min-height: 300px;
+        max-height: $bloc2-article_heightDesktop;
+        // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+        .contain{
+            background-color: brown;
+            height: 100%;
+        }            
+    }
+    .bloc:nth-child(3) {
+        background-color: blue;
+        //Hauteur en fonction width viewport et ses limites
+        height: 80vw;
+        min-height: 300px;
+        max-height: $bloc3-article_heightDesktop;
+        // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+        .contain{
             background-color: blue;
             height: 100%;
         }            
     }
+    .bloc:nth-child(4) {
+        background-color: rgb(189, 45, 45);
+        //Hauteur en fonction width viewport et ses limites
+        height: 80vw;
+        min-height: 300px;
+        max-height: $bloc4-article_heightDesktop;
+        // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+        .contain{
+            background-color: rgb(189, 45, 45);
+            height: 100%;
+        }            
+    }
+}
+footer {
+    background-color: black;
+    //Hauteur en fonction width viewport et ses limites
+    height: 50vw;
+    min-height: 200px;
+    max-height: $footer_heightDesktop;
+    // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+    .contain{
+        background-color: black;
+        height: 100%;
+    }            
 }
 
 }
@@ -121,15 +177,16 @@ $bloc1-article_heightDesktop: 350px;
         //Style
         background-color: red;
     }
+    .contain {
+        //Bloquer la largeur 
+        max-width: map-get($breakpoints,medium);
+        height: 100%;
+        margin: 0 auto;
+    }
     .main {
         background-color: green;
         height: auto;
-        .contain {
-            //Bloquer la largeur 
-            max-width: map-get($breakpoints,medium);
-            height: 100%;
-            margin: 0 auto;
-        }
+       
         .bloc:nth-child(1) {
             background-color: blue;
             height: $bloc1_heightDesktop;
@@ -185,13 +242,9 @@ $bloc1-article_heightDesktop: 350px;
             height: 100%;
             margin: 0 auto;
         }
-        //Applicable aux blocs
-        .bloc {
-            margin-bottom: 10px;
-        }
         //Bloc 1: Actualités
         .bloc:nth-child(1) {
-            background-color: blue;
+            background-color: pink;
             height: $bloc1-article_heightDesktop;
             // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
             .contain{
@@ -199,24 +252,45 @@ $bloc1-article_heightDesktop: 350px;
                 height: 100%;
             }
         }
-        //Bloc 2: Notre démarche
+        //Bloc 3: Notre démarche
         .bloc:nth-child(2) {
-            background-color: pink;
-            height: 300px;
+            background-color: brown;
+            height: $bloc2-article_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
         //Bloc 3: Nos installations
         .bloc:nth-child(3) {
-            background-color: yellow;
-            height: 300px;
+            background-color: blue;
+            height: $bloc3-article_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
         //Bloc 4: Témoignages
         .bloc:nth-child(4) {
-            background-color: brown;
-            height: 300px;
+            background-color: rgb(189, 45, 45);
+            height: $bloc4-article_heightDesktop;
+            // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
+            .contain{
+                background-color: yellow;
+                height: 100%;
+            }
         }
+        
     }
     footer {
-        height: 200px;
+        height: $footer_heightDesktop;
         background-color: black;
+        .contain{
+            background-color: yellow;
+            height: 100%;
+        }
     }
+   
 }

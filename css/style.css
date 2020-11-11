@@ -1,4 +1,14 @@
-/*---   GENERAL    ---- */
+/* ------- MIXIN RACCOURCIS ------- */
+/* GENERAL */
+@font-face {
+  font-family: "lato-regular";
+  src: url("quadranta.eot?") format("ttf");
+}
+
+.text_logo {
+  font-family: "lato-regular";
+}
+
 a,
 a:link,
 a:visited,
@@ -11,108 +21,6 @@ a:active {
 
 li {
   list-style-type: none;
-}
-
-.menu {
-  height: auto;
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-.topHeader {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: center;
-      align-items: center;
-  margin: 20px;
-}
-
-.topHeader .logo {
-  height: 60px;
-  width: 250px;
-}
-
-.dropdownMenu {
-  display: none;
-}
-
-.hamburger {
-  height: 45px;
-}
-
-.navigationHeader {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-
-.navigationHeader nav ul li {
-  width: 100%;
-}
-
-.navigationHeader nav ul li a {
-  font-size: 1.6em;
-}
-
-input[type='checkbox'] ~ .nav {
-  display: none;
-}
-
-input[type='checkbox']:checked ~ nav {
-  display: block;
-}
-
-@media screen and (min-width: 940px) {
-  /* ---   Header   --- */
-  .hamburger {
-    display: none;
-  }
-  /* Mettre le header en ligne*/
-  .menu {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-  }
-  .navigationHeader {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-  input[type='checkbox'] ~ .nav {
-    display: block;
-  }
-  input[type='checkbox'] ~ .nav ul {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-  }
-  .nav li a {
-    margin: 30px;
-  }
-}
-
-/* ------- MIXIN RACCOURCIS ------- */
-/* GENERAL */
-@font-face {
-  font-family: 'lato-regular';
-  src: url("quadranta.eot?") format("ttf");
-}
-
-.text_logo {
-  font-family: 'lato-regular';
 }
 
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
@@ -136,6 +44,8 @@ input[type='checkbox']:checked ~ nav {
     height: auto;
     background-color: white;
     padding: 5px 10px;
+    /* Ouvrir le menu + Style */
+    /* Fermer le menu */
   }
   header .menu .logo {
     height: 100%;
@@ -160,7 +70,7 @@ input[type='checkbox']:checked ~ nav {
     -ms-flex-align: center;
         align-items: center;
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0px;
     height: 200px;
     width: 100vw;
@@ -168,9 +78,6 @@ input[type='checkbox']:checked ~ nav {
   }
   header .menu input[type="checkbox"] ~ .navigation {
     display: none;
-    height: 50px;
-    width: 50px;
-    background-color: pink;
   }
   header .menu .navigation ul {
     text-align: center;
@@ -219,12 +126,12 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
   }
   .main .bloc:nth-child(4) {
-    background-color: #FCFF6C;
+    background-color: #fcff6c;
     height: 80vw;
     max-height: 300px;
   }
   .main .bloc:nth-child(4) .contain {
-    background-color: #FCFF6C;
+    background-color: #fcff6c;
     height: 100%;
   }
   .main .bloc:nth-child(5) {
@@ -298,6 +205,33 @@ input[type='checkbox']:checked ~ nav {
     height: 350px;
     background-color: red;
   }
+  header .menu {
+    /* Ouvrir le menu + Style */
+  }
+  header .menu input[type="checkbox"]:checked ~ .navigation, header .menu input[type="checkbox"] ~ .navigation {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    height: auto;
+    top: 0px;
+    background-color: #b3d143;
+  }
+  header .menu .navigation ul {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+  }
+  header .menu .navigation ul li a {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  header .menu .hamburger {
+    display: none;
+  }
   .contain {
     max-width: 800px;
     height: 100%;
@@ -332,7 +266,7 @@ input[type='checkbox']:checked ~ nav {
     height: 100%;
   }
   .main .bloc:nth-child(4) {
-    background-color: #FCFF6C;
+    background-color: #fcff6c;
     height: 300px;
   }
   .main .bloc:nth-child(4) .contain {

@@ -249,11 +249,18 @@ li {
 @include respond-to("medium") {
     //Structure desktop
     header {
+        //Comportement enfant
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         //Dimension
         height: $header_heightDesktop;
         //Style
-        background-color: red;
+        background-image: url("../img/photos/bgHeader.jpg");
         .menu {
+            justify-content: space-between;
+            background-color: transparent;
+            width: map-get($breakpoints, medium);
             /* Ouvrir le menu + Style */
             input[type="checkbox"]:checked ~ .navigation, input[type="checkbox"] ~ .navigation {
                 position: relative;
@@ -262,21 +269,40 @@ li {
                 justify-content: center;
                 align-items: center;
                 //Ecrasement des propriétés existantes
-                height: auto;
+                height: auto;              
                 top:0px;
                 //Style
                 background-color: $CG_vertLight;
+                //Espacement
+                margin-left:20px;
+                padding: 10px;
+               
             }
             .navigation ul{
                 display: flex;
                 height: 100%;
+                margin-bottom: 0px;
             }
             .navigation ul li a{
                 font-size: 15px;
-                margin-left:10px;
+                margin-left:5px;
+                margin-right:5px;
             }
             .hamburger{
                 display:none;
+            }
+            .logo{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                //Style
+                background-color:white;
+                padding:5px;
+                img{
+                    height: 18px;
+                    order:-2;
+                }
+                
             }
         }
     }

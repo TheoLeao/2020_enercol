@@ -1,5 +1,6 @@
 @import "menu";
 @import "mixins";
+//Variables hauteur
 $header_heightDesktop: 350px;
 $bloc1_heightDesktop: 400px;
 $bloc2_heightDesktop: 300px;
@@ -11,6 +12,14 @@ $bloc2-article_heightDesktop: 350px;
 $bloc3-article_heightDesktop: 350px;
 $bloc4-article_heightDesktop: 350px;
 $footer_heightDesktop: 200px;
+
+//Variables couleurs charte graphique
+$CG_marronLight: rgb(232, 221, 202);
+$CG_marronDark: rgb(195, 165, 117);
+$CG_jaune: rgb(252, 183, 49);
+$CG_bleu: rgb(0, 175, 236);
+$CG_vertLight: rgb(179, 209, 67);
+$CG_vertDark: rgb(100, 123, 34);
 
 /* GENERAL */
 @font-face {
@@ -35,7 +44,7 @@ $footer_heightDesktop: 200px;
             justify-content: space-between;
             align-items: center;
             height: auto;
-            background-color: green;
+            background-color: white;
             padding: 5px 10px;
 
             .logo{
@@ -49,12 +58,42 @@ $footer_heightDesktop: 200px;
             }
             label {
                 margin-bottom: 0px;
-            }
-            
-        
+            }      
             #dropdownMenu{
                 display: none
             }
+
+            input[type="checkbox"]:checked ~ .navigation {
+                //Comportement enfants
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                //Position
+                position: absolute;
+                top: 55px;
+                left: 0px;
+                //Dimensionnement
+                height: 200px;
+                width: 100vw;
+                //Styles
+                background-color: rgb(245, 245, 245);
+            }
+            input[type="checkbox"] ~ .navigation {
+                display: none;
+                height: 50px;
+                width: 50px;
+                background-color: pink;
+            }
+            .navigation ul{
+                text-align: center;
+            }
+            .navigation ul li{
+                font-size: 1.2em;
+            }
+            .misEnAvant{
+                color: $CG_jaune;
+            }
+
         }
     }
 /* --- MAIN --- */

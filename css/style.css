@@ -134,7 +134,7 @@ input[type='checkbox']:checked ~ nav {
     -ms-flex-align: center;
         align-items: center;
     height: auto;
-    background-color: green;
+    background-color: white;
     padding: 5px 10px;
   }
   header .menu .logo {
@@ -151,6 +151,35 @@ input[type='checkbox']:checked ~ nav {
   }
   header .menu #dropdownMenu {
     display: none;
+  }
+  header .menu input[type="checkbox"]:checked ~ .navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    height: 200px;
+    width: 100vw;
+    background-color: whitesmoke;
+  }
+  header .menu input[type="checkbox"] ~ .navigation {
+    display: none;
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+  }
+  header .menu .navigation ul {
+    text-align: center;
+  }
+  header .menu .navigation ul li {
+    font-size: 1.2em;
+  }
+  header .menu .misEnAvant {
+    color: #fcb731;
   }
   /* --- MAIN --- */
   .main {

@@ -105,6 +105,16 @@ input[type='checkbox']:checked ~ nav {
 }
 
 /* ------- MIXIN RACCOURCIS ------- */
+/* GENERAL */
+@font-face {
+  font-family: 'lato-regular';
+  src: url("quadranta.eot?") format("ttf");
+}
+
+.text_logo {
+  font-family: 'lato-regular';
+}
+
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @media (min-width: 0px) {
   /* --- HEADER --- */
@@ -115,8 +125,32 @@ input[type='checkbox']:checked ~ nav {
     background-color: red;
   }
   header .menu {
-    height: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    height: auto;
     background-color: green;
+    padding: 5px 10px;
+  }
+  header .menu .logo {
+    height: 100%;
+  }
+  header .menu .logo img {
+    height: 40px;
+  }
+  header .menu .hamburger {
+    width: 35px;
+  }
+  header .menu label {
+    margin-bottom: 0px;
+  }
+  header .menu #dropdownMenu {
+    display: none;
   }
   /* --- MAIN --- */
   .main {

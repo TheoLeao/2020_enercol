@@ -11,19 +11,50 @@ $bloc2-article_heightDesktop: 350px;
 $bloc3-article_heightDesktop: 350px;
 $bloc4-article_heightDesktop: 350px;
 $footer_heightDesktop: 200px;
+
+/* GENERAL */
+@font-face {
+    font-family: 'lato-regular';
+    src: url('quadranta.eot?') format('ttf');
+}
+.text_logo{
+    font-family: 'lato-regular';
+}
 /* ------- STYLE POUR ECRAN TAILLE SMALL: min-width:0px ------- */
 @include respond-to("small") {
-
 /* --- HEADER --- */
     header{
-
+        
         min-height: 150px;
         max-height: $header_heightDesktop;
         height: 50vw;
         background-color: red;   
         .menu{
-            height: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
             background-color: green;
+            padding: 5px 10px;
+
+            .logo{
+                height: 100%;
+                img{
+                    height: 40px;
+                }
+            }
+            .hamburger{
+                width: 35px;
+            }
+            label {
+                margin-bottom: 0px;
+            }
+            
+        
+            #dropdownMenu{
+                display: none
+            }
         }
     }
 /* --- MAIN --- */

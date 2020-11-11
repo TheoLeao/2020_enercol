@@ -17,6 +17,7 @@ a:active {
   color: black;
   text-decoration: none;
   background-color: transparent;
+  font-family: lato-regular;
 }
 
 li {
@@ -85,7 +86,7 @@ li {
   header .menu .navigation ul li {
     font-size: 1.2em;
   }
-  header .menu .misEnAvant {
+  header .menu .misEnAvant a {
     color: #fcb731;
   }
   /* --- MAIN --- */
@@ -210,12 +211,16 @@ li {
         flex-direction: column;
     height: 350px;
     background-image: url("../img/photos/bgHeader.jpg");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position-x: center;
+    background-position-y: -300px;
   }
   header .menu {
     -ms-flex-pack: justify;
         justify-content: space-between;
     background-color: transparent;
-    width: 800px;
+    max-width: 800px;
     /* Ouvrir le menu + Style */
   }
   header .menu input[type="checkbox"]:checked ~ .navigation, header .menu input[type="checkbox"] ~ .navigation {
@@ -228,7 +233,6 @@ li {
         align-items: center;
     height: auto;
     top: 0px;
-    background-color: #b3d143;
     margin-left: 20px;
     padding: 10px;
   }
@@ -237,6 +241,24 @@ li {
     display: flex;
     height: 100%;
     margin-bottom: 0px;
+  }
+  header .menu .navigation li {
+    height: 45px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    background-color: #b3d143;
+  }
+  header .menu .navigation li a {
+    font-weight: bold;
+  }
+  header .menu .navigation .misEnAvant {
+    background-color: #fcb731;
+    margin-left: 10px;
+  }
+  header .menu .navigation .misEnAvant a {
+    color: black;
   }
   header .menu .navigation ul li a {
     font-size: 15px;

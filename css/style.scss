@@ -36,6 +36,7 @@ a:active {
     color: black;
     text-decoration: none;
     background-color: transparent;
+    font-family: lato-regular;
 }
 
 li {
@@ -99,7 +100,7 @@ li {
             .navigation ul li {
                 font-size: 1.2em;
             }
-            .misEnAvant {
+            .misEnAvant a  {
                 color: $CG_jaune;
             }
         }
@@ -257,10 +258,14 @@ li {
         height: $header_heightDesktop;
         //Style
         background-image: url("../img/photos/bgHeader.jpg");
+        background-repeat: no-repeat;
+        background-size: 120%;
+        background-position-x:center;
+        background-position-y: -300px;
         .menu {
             justify-content: space-between;
             background-color: transparent;
-            width: map-get($breakpoints, medium);
+            max-width: map-get($breakpoints, "medium");
             /* Ouvrir le menu + Style */
             input[type="checkbox"]:checked ~ .navigation, input[type="checkbox"] ~ .navigation {
                 position: relative;
@@ -272,7 +277,7 @@ li {
                 height: auto;              
                 top:0px;
                 //Style
-                background-color: $CG_vertLight;
+                    //background-color: $CG_vertLight;
                 //Espacement
                 margin-left:20px;
                 padding: 10px;
@@ -282,6 +287,22 @@ li {
                 display: flex;
                 height: 100%;
                 margin-bottom: 0px;
+            }
+            .navigation li{
+                height: 45px;
+                display: flex;
+                align-items: center;
+                background-color: $CG_vertLight;
+                a{
+                    font-weight: bold;
+                }
+            }
+            .navigation .misEnAvant {
+                background-color: $CG_jaune;
+                margin-left: 10px;
+                a{
+                    color: black;
+                }
             }
             .navigation ul li a{
                 font-size: 15px;

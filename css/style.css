@@ -102,7 +102,6 @@ li {
     height: 100%;
   }
   .main .bloc:nth-child(1) {
-    background-color: blue;
     height: auto;
     min-height: 300px;
     max-height: auto;
@@ -159,8 +158,8 @@ li {
     height: 100px;
   }
   .main .bloc:nth-child(1) .contain {
-    background-color: blue;
     height: auto;
+    background-color: white;
   }
   .main .bloc:nth-child(2) {
     background-color: palegreen;
@@ -344,11 +343,11 @@ li {
     height: auto;
   }
   .main .bloc:nth-child(1) {
-    background-color: blue;
+    background-color: white;
     height: auto;
   }
   .main .bloc:nth-child(1) .contain {
-    background-color: yellow;
+    background-color: white;
     height: 100%;
   }
   .main .bloc:nth-child(1) .iconsEnergie {

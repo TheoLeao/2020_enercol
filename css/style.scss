@@ -121,7 +121,6 @@ li {
         }
         //Bloc 1: Les énergies
         .bloc:nth-child(1) {
-            background-color: blue;
             //Hauteur en fonction width viewport et ses limites
             height: auto;
             min-height: 300px;
@@ -172,8 +171,8 @@ li {
 
             // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
             .contain {
-                background-color: blue;
                 height: auto;
+                background-color:white;
             }
             
 
@@ -387,10 +386,10 @@ li {
         height: auto;
 
         .bloc:nth-child(1) {
-            background-color: blue;
+            background-color: white;
             height: $bloc1_heightDesktop;
             .contain {
-                background-color: yellow;
+                background-color: white;
                 height: 100%;
             }
             .iconsEnergie{

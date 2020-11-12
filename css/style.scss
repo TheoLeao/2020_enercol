@@ -1,7 +1,7 @@
 @import "mixins";
 //Variables hauteur
 $header_heightDesktop: 350px;
-$bloc1_heightDesktop: 400px;
+$bloc1_heightDesktop: auto;
 $bloc2_heightDesktop: 300px;
 $bloc3_heightDesktop: 100px;
 $bloc4_heightDesktop: 300px;
@@ -50,6 +50,12 @@ li {
         max-height: $header_heightDesktop;
         height: 50vw;
         background-color: red;
+
+        //Style
+        background-image: url("../img/photos/bgHeader.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
         .menu {
             display: flex;
             flex-direction: row;
@@ -117,14 +123,60 @@ li {
         .bloc:nth-child(1) {
             background-color: blue;
             //Hauteur en fonction width viewport et ses limites
-            height: 80vw;
+            height: auto;
             min-height: 300px;
             max-height: $bloc1_heightDesktop;
+            h2, h2 ~ p{
+                color:$CG_jaune;
+                font-weight: 800;
+                
+            }   
+            h2{
+                font-size: 1.7em;
+            }
+            h2 ~ p{
+                font-size: 1.1em;
+                margin-top: -10px;
+                
+            }
+            .contain {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+                font-family: lato-regular;
+            }
+            .logo{
+                width: 60px;
+            }
+            .iconsEnergie{
+                display: flex;
+                flex-direction: column;
+                width: 100%;  
+            }
+            .ligne1, .ligne2{
+                display: flex;
+                width: 100%;
+                height: auto;
+            }
+            .elementEnergie{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                img{
+                    height: 100px;
+                }
+            }
+
             // /!\ Uniquement afin de voir visuellement les blocs - à retirer /!\
             .contain {
                 background-color: blue;
-                height: 100%;
+                height: auto;
             }
+            
+
         }
 
         //Bloc 2: Section "Produire et mieux consommer"
@@ -256,12 +308,6 @@ li {
         flex-direction: column;
         //Dimension
         height: $header_heightDesktop;
-        //Style
-        background-image: url("../img/photos/bgHeader.jpg");
-        background-repeat: no-repeat;
-        background-size: 120%;
-        background-position-x:center;
-        background-position-y: -300px;
         .menu {
             justify-content: space-between;
             background-color: transparent;
@@ -281,6 +327,7 @@ li {
                 //Espacement
                 margin-left:20px;
                 padding: 10px;
+                background-color: transparent;
                
             }
             .navigation ul{
@@ -294,7 +341,7 @@ li {
                 align-items: center;
                 background-color: $CG_vertLight;
                 a{
-                    font-weight: bold;
+                    font-weight: 700;
                 }
             }
             .navigation .misEnAvant {
@@ -345,6 +392,15 @@ li {
             .contain {
                 background-color: yellow;
                 height: 100%;
+            }
+            .iconsEnergie{
+                flex-direction: row;
+
+                .elementEnergie{
+                    img{
+                        width: 80px;
+                    }
+                }
             }
         }
         .bloc:nth-child(2) {

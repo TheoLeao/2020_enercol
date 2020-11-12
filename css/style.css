@@ -32,6 +32,10 @@ li {
     max-height: 350px;
     height: 50vw;
     background-color: red;
+    background-image: url("../img/photos/bgHeader.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   header .menu {
     display: -ms-flexbox;
@@ -99,13 +103,64 @@ li {
   }
   .main .bloc:nth-child(1) {
     background-color: blue;
-    height: 80vw;
+    height: auto;
     min-height: 300px;
-    max-height: 400px;
+    max-height: auto;
+  }
+  .main .bloc:nth-child(1) h2, .main .bloc:nth-child(1) h2 ~ p {
+    color: #fcb731;
+    font-weight: 800;
+  }
+  .main .bloc:nth-child(1) h2 {
+    font-size: 1.7em;
+  }
+  .main .bloc:nth-child(1) h2 ~ p {
+    font-size: 1.1em;
+    margin-top: -10px;
+  }
+  .main .bloc:nth-child(1) .contain {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    padding-top: 20px;
+    font-family: lato-regular;
+  }
+  .main .bloc:nth-child(1) .logo {
+    width: 60px;
+  }
+  .main .bloc:nth-child(1) .iconsEnergie {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+  }
+  .main .bloc:nth-child(1) .ligne1, .main .bloc:nth-child(1) .ligne2 {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+  }
+  .main .bloc:nth-child(1) .elementEnergie {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .main .bloc:nth-child(1) .elementEnergie img {
+    height: 100px;
   }
   .main .bloc:nth-child(1) .contain {
     background-color: blue;
-    height: 100%;
+    height: auto;
   }
   .main .bloc:nth-child(2) {
     background-color: palegreen;
@@ -210,11 +265,6 @@ li {
     -ms-flex-direction: column;
         flex-direction: column;
     height: 350px;
-    background-image: url("../img/photos/bgHeader.jpg");
-    background-repeat: no-repeat;
-    background-size: 120%;
-    background-position-x: center;
-    background-position-y: -300px;
   }
   header .menu {
     -ms-flex-pack: justify;
@@ -235,6 +285,7 @@ li {
     top: 0px;
     margin-left: 20px;
     padding: 10px;
+    background-color: transparent;
   }
   header .menu .navigation ul {
     display: -ms-flexbox;
@@ -251,7 +302,7 @@ li {
     background-color: #b3d143;
   }
   header .menu .navigation li a {
-    font-weight: bold;
+    font-weight: 700;
   }
   header .menu .navigation .misEnAvant {
     background-color: #fcb731;
@@ -294,11 +345,18 @@ li {
   }
   .main .bloc:nth-child(1) {
     background-color: blue;
-    height: 400px;
+    height: auto;
   }
   .main .bloc:nth-child(1) .contain {
     background-color: yellow;
     height: 100%;
+  }
+  .main .bloc:nth-child(1) .iconsEnergie {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  .main .bloc:nth-child(1) .iconsEnergie .elementEnergie img {
+    width: 80px;
   }
   .main .bloc:nth-child(2) {
     background-color: palegreen;
